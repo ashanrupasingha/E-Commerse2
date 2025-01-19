@@ -161,28 +161,28 @@
   <div class="grid">
     <!-- Movie Card 1 -->
     <div class="movie-card">
-      <img src="https://via.placeholder.com/300x400" alt="Movie 1">
+      <img src="photos/images.jpeg" alt="Movie 1">
       <h3>The Covenant</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi commodo felis tempor augue tristique.</p>
       <button>Watch Now</button>
     </div>
     <!-- Movie Card 2 -->
     <div class="movie-card">
-      <img src="https://via.placeholder.com/300x400" alt="Movie 2">
+      <img src="photos/65.jpg" alt="Movie 2">
       <h3>65</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi commodo felis tempor augue tristique.</p>
       <button>Watch Now</button>
     </div>
     <!-- Movie Card 3 -->
     <div class="movie-card">
-      <img src="https://via.placeholder.com/300x400" alt="Movie 3">
+      <img src="photos/avator2.jpg" alt="Movie 3">
       <h3>Avatar 2</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi commodo felis tempor augue tristique.</p>
       <button>Watch Now</button>
     </div>
     <!-- Movie Card 4 -->
     <div class="movie-card">
-      <img src="https://via.placeholder.com/300x400" alt="Movie 4">
+      <img src="photos/shark%20attack.jpg" alt="Movie 4">
       <h3>Shark Attack</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi commodo felis tempor augue tristique.</p>
       <button>Watch Now</button>

@@ -115,9 +115,10 @@
             padding: 1rem;
             background: rgba(0, 0, 0, 0.8);
         }
-        #background{
-            display: flex;
-        }
+       body{
+           background-image: url(photos/homepagebackgroundphoto.webp);
+           background-size: cover;
+       }
     </style>
 </head>
 
@@ -166,7 +167,7 @@
         <!-- Card 1 -->
         <div class="col-md-3">
             <div class="movie-card">
-                <img src="https://via.placeholder.com/300x450" alt="Movie Poster">
+                <img src="photos/the%20littlemarmed.jpg" alt="Movie Poster">
                 <div class="movie-info">
                     <h5>The Little Mermaid</h5>
                     <p>2023 | PG | 2h 14min</p>
@@ -176,7 +177,7 @@
         <!-- Card 2 -->
         <div class="col-md-3">
             <div class="movie-card">
-                <img src="https://via.placeholder.com/300x450" alt="Movie Poster">
+                <img src="photos/tank.jpg" alt="Movie Poster">
                 <div class="movie-info">
                     <h5>Tank</h5>
                     <p>2023 | PG-13 | 1h 55min</p>
@@ -186,7 +187,7 @@
         <!-- Card 3 -->
         <div class="col-md-3">
             <div class="movie-card">
-                <img src="https://via.placeholder.com/300x450" alt="Movie Poster">
+                <img src="photos/45.jpg" alt="Movie Poster">
                 <div class="movie-info">
                     <h5>45</h5>
                     <p>2023 | R | 2h 20min</p>
@@ -196,7 +197,7 @@
         <!-- Card 4 -->
         <div class="col-md-3">
             <div class="movie-card">
-                <img src="https://via.placeholder.com/300x450" alt="Movie Poster">
+                <img src="photos/noha.jpg" alt="Movie Poster">
                 <div class="movie-info">
                     <h5>Noah Driver</h5>
                     <p>2023 | PG | 1h 45min</p>

@@ -90,6 +90,26 @@
             transform: scale(0.95);
         }
 
+        .btn-add {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-left: 0.5rem;
+        }
+
+        .btn-add:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 10px rgba(40, 167, 69, 0.6);
+        }
+
+        .btn-add:active {
+            transform: scale(0.95);
+        }
+
         /* Footer */
         footer {
             text-align: center;
@@ -116,6 +136,7 @@
         .movie-card:hover img {
             transform: scale(1.1);
         }
+
     </style>
 </head>
 
@@ -124,8 +145,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">iMovies</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -151,52 +171,56 @@
         <!-- Movie Card 1 -->
         <div class="col-md-3">
             <div class="movie-card">
-                <img src="https://via.placeholder.com/300x450" alt="Movie Poster">
+                <img src="photos/images.jpeg" alt="Movie Poster">
                 <div class="movie-info">
                     <h5>The Covenant</h5>
                     <p>2023 | War/Action | 2h 3min</p>
                 </div>
                 <div class="action-buttons">
                     <button class="btn btn-remove">Remove</button>
+                    <button class="btn btn-add">Add to Cart</button>
                 </div>
             </div>
         </div>
         <!-- Movie Card 2 -->
         <div class="col-md-3">
             <div class="movie-card">
-                <img src="https://via.placeholder.com/300x450" alt="Movie Poster">
+                <img src="photos/65.jpg" alt="Movie Poster">
                 <div class="movie-info">
                     <h5>65</h5>
                     <p>2023 | Sci-Fi/Thriller | 1h 55min</p>
                 </div>
                 <div class="action-buttons">
                     <button class="btn btn-remove">Remove</button>
+                    <button class="btn btn-add">Add to Cart</button>
                 </div>
             </div>
         </div>
         <!-- Movie Card 3 -->
         <div class="col-md-3">
             <div class="movie-card">
-                <img src="https://via.placeholder.com/300x450" alt="Movie Poster">
+                <img src="photos/the%20littlemarmed.jpg" alt="Movie Poster">
                 <div class="movie-info">
                     <h5>The Little Mermaid</h5>
                     <p>2023 | Romance/Fantasy | 2h 14min</p>
                 </div>
                 <div class="action-buttons">
                     <button class="btn btn-remove">Remove</button>
+                    <button class="btn btn-add">Add to Cart</button>
                 </div>
             </div>
         </div>
         <!-- Movie Card 4 -->
         <div class="col-md-3">
             <div class="movie-card">
-                <img src="https://via.placeholder.com/300x450" alt="Movie Poster">
+                <img src="photos/shark%20attack.jpg" alt="Movie Poster">
                 <div class="movie-info">
                     <h5>Shark Attack</h5>
                     <p>2023 | Horror/Action | 1h 45min</p>
                 </div>
                 <div class="action-buttons">
                     <button class="btn btn-remove">Remove</button>
+                    <button class="btn btn-add">Add to Cart</button>
                 </div>
             </div>
         </div>
