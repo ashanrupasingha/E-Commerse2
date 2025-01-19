@@ -27,6 +27,7 @@
             from {
                 opacity: 0;
             }
+
             to {
                 opacity: 1;
             }
@@ -104,6 +105,7 @@
             from {
                 box-shadow: 0 0 10px rgba(255, 193, 7, 0.8);
             }
+
             to {
                 box-shadow: 0 0 20px rgba(255, 193, 7, 1);
             }
@@ -115,10 +117,11 @@
             padding: 1rem;
             background: rgba(0, 0, 0, 0.8);
         }
-       body{
-           background-image: url(photos/homepagebackgroundphoto.webp);
-           background-size: cover;
-       }
+
+        body {
+            background-image: url(photos/homepagebackgroundphoto.webp);
+            background-size: cover;
+        }
     </style>
 </head>
 
@@ -142,6 +145,20 @@
                 <li class="nav-item">
                     <a class="nav-link" href="mylist.jsp">My List</a>
                 </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="categoryDropdown" role="button" data-bs-toggle="dropdown"
+                       aria-expanded="false">
+                        Category
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="categoryDropdown">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Romance</a></li>
+                        <li><a class="dropdown-item" href="#">Sci-Fi</a></li>
+                        <li><a class="dropdown-item" href="#">Comedy</a></li>
+                        <li><a class="dropdown-item" href="#">Horror</a></li>
+                        <li><a class="dropdown-item" href="#">Drama</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </div>
@@ -154,8 +171,9 @@
         <p>2023 | PG | 2h 14min | Romance</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla commodo felis in lacinia auctor.</p>
         <div class="d-flex justify-content-center gap-3">
-            <button class="btn btn-custom px-4 py-2">Watch Now</button>
-            <button class="btn btn-outline-light px-4 py-2">+ My List</button>
+
+            <a href="admin.jsp" class="btn btn-custom px-4 py-2">Watch Now</a>
+            <a href="mylist.jsp" class="btn btn-outline-light px-4 py-2">My List</a>
         </div>
     </div>
 </section>
@@ -206,7 +224,7 @@
         </div>
     </div>
 </div>
-<img  id="background" src="photos/homepage%20background%20photo.webp">
+<img id="background" src="photos/homepage%20background%20photo.webp">
 
 <!-- Footer -->
 <footer class="bg-dark text-white p-4 text-center mt-auto fixed-bottom">

@@ -215,6 +215,23 @@
             transform: translateX(200%);
         }
 
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            font-weight: bold;
+            background-color: #999;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: whitesmoke;
+        }
+
     </style>
 </head>
 <body>
@@ -248,7 +265,7 @@
             <input type="email" placeholder="Email" />
             <input type="password" placeholder="Password" />
             <a href="#">Forgot Your Password?</a>
-            <button>Sign In</button>
+            <a href="index.jsp" class="button">Sing In</a>
         </form>
     </div>
     <div class="toggle-container">
