@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -52,7 +53,7 @@
 <!-- Sidebar -->
 <div class="sidebar d-flex flex-column">
     <h3 class="p-3 text-center border-bottom">Admin Dashboard</h3>
-    <a href="logout.jsp">Logout</a>
+    <a href="index.jsp">Logout</a>
 </div>
 
 <!-- Main Content -->
@@ -117,7 +118,7 @@
                 <div class="card">
                     <div class="card-body text-center">
                         <h5 class="card-title">View Orders</h5>
-                        <a href="view_orders.jsp" class="btn btn-success">Go</a>
+                        <a href="ordersee.jsp" class="btn btn-success">Go</a>
                     </div>
                 </div>
             </div>

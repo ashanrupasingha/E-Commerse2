@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -246,9 +247,11 @@
                 <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
             </div>
             <span>or use your email for registration</span>
-            <input type="text" placeholder="Name" />
-            <input type="email" placeholder="Email" />
-            <input type="password" placeholder="Password" />
+            <input name="name" type="text" placeholder="Name" />
+            <input name="email" type="email" placeholder="Email" />
+            <input name="password" type="password" placeholder="Password" />
+            <input name="conform password" type="password" placeholder="Conform Password" />
+
             <button>Sign Up</button>
         </form>
     </div>
