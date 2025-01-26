@@ -61,7 +61,7 @@
     <h1 class="mb-4">Welcome, Admin!</h1>
 
     <!-- Product Management -->
-    <section id="products" class="mb-5">
+    <section id="products" class="mb-5"></section>
         <h3 class="mb-3">Product Management</h3>
         <div class="row g-3">
             <div class="col-md-3">
@@ -102,7 +102,7 @@
                 <div class="card">
                     <div class="card-body text-center">
                         <h5 class="card-title">View Categories</h5>
-                        <a href="view_categories.jsp" class="btn btn-success">Go</a>
+                        <a href="${pageContext.request.contextPath}/category-List" class="btn btn-success">Go</a>
                     </div>
                 </div>
             </div>
@@ -133,7 +133,7 @@
                 <div class="card">
                     <div class="card-body text-center">
                         <h5 class="card-title">View Users</h5>
-                        <a href="view_users.jsp" class="btn btn-success">Go</a>
+                        <a href="CategoryList.jsp" class="btn btn-success">Go</a>
                     </div>
                 </div>
             </div>
@@ -141,7 +141,7 @@
                 <div class="card">
                     <div class="card-body text-center">
                         <h5 class="card-title">Activate/Deactivate Users</h5>
-                        <a href="manage_users.jsp" class="btn btn-warning">Go</a>
+                        <a href="UserDelete.jsp" class="btn btn-warning">Go</a>
                     </div>
                 </div>
             </div>

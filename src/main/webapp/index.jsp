@@ -1,4 +1,13 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="lk.ijse.DTO.ProductDTO" %>
+<%@ page import="java.util.List" %>
+
+<%
+    String alertType = (String) request.getAttribute("alertType");
+    String alertMessage = (String) request.getAttribute("alertMessage");
+    List<ProductDTO> dataList = (List<ProductDTO>) request.getAttribute("homeProducts");
+%>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,120 +17,31 @@
     <title>iMovies - The Movie Experience</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Additional CSS for 3D Animations -->
+    <link rel="stylesheet" href="css/styles.css">
     <style>
         body {
-            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-            url('https://via.placeholder.com/1920x1080') no-repeat center center fixed;
-            background-size: cover;
-            color: white;
-            overflow-x: hidden;
+            background-color: #000;
+            color: #fff;
         }
-
         .hero {
-            padding: 5rem 2rem;
-            text-align: center;
-            animation: fadeIn 2s ease-in-out;
+            background: url('photos/homepagebackgroundphoto.webp') no-repeat center center/cover;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
-        }
-
-        .hero h1 {
-            font-size: 4rem;
-            text-shadow: 2px 2px 10px #000;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-        }
-
-        .btn-custom {
-            background-color: #ff5c5c;
-            color: white;
-            border: none;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .btn-custom:hover {
-            transform: scale(1.1);
-            box-shadow: 0 4px 20px rgba(255, 92, 92, 0.5);
-        }
-
-        /* Movie Card 3D Hover Effect */
         .movie-card {
-            background: rgba(0, 0, 0, 0.6);
-            border-radius: 10px;
+            background: #111;
+            border-radius: 15px;
             overflow: hidden;
-            perspective: 1000px;
-            transition: transform 0.5s ease;
-            transform-style: preserve-3d;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease;
         }
-
         .movie-card:hover {
-            transform: rotateY(10deg) scale(1.05);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+            transform: scale(1.05);
         }
-
-        .movie-card img {
-            width: 100%;
-            height: auto;
-        }
-
         .movie-info {
-            padding: 1rem;
-            text-align: center;
-        }
-
-        .movie-info h5 {
-            color: #ffc107;
-        }
-
-        /* Section Separator with Glow Effect */
-        .section-title {
-            text-align: center;
-            margin-bottom: 2rem;
-            text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-        }
-
-        .section-title::after {
-            content: "";
-            display: block;
-            width: 80px;
-            height: 4px;
-            background: #ffc107;
-            margin: 0.5rem auto;
-            border-radius: 2px;
-            animation: glow 1.5s infinite alternate;
-        }
-
-        @keyframes glow {
-            from {
-                box-shadow: 0 0 10px rgba(255, 193, 7, 0.8);
-            }
-
-            to {
-                box-shadow: 0 0 20px rgba(255, 193, 7, 1);
-            }
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 3rem;
-            padding: 1rem;
-            background: rgba(0, 0, 0, 0.8);
-        }
-
-        body {
-            background-image: url(photos/homepagebackgroundphoto.webp);
-            background-size: cover;
+            padding: 15px;
         }
     </style>
 </head>
@@ -138,7 +58,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" href="${pageContext.request.contextPath}/loadAllProducts">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="tranding.jsp">Trending</a>
@@ -146,93 +66,61 @@
                 <li class="nav-item">
                     <a class="nav-link" href="mylist.jsp">My List</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="categoryDropdown" role="button" data-bs-toggle="dropdown"
-                       aria-expanded="false">
-                        Category
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="categoryDropdown">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Romance</a></li>
-                        <li><a class="dropdown-item" href="#">Sci-Fi</a></li>
-                        <li><a class="dropdown-item" href="#">Comedy</a></li>
-                        <li><a class="dropdown-item" href="#">Horror</a></li>
-                        <li><a class="dropdown-item" href="#">Drama</a></li>
-                    </ul>
-                </li>
             </ul>
         </div>
     </div>
 </nav>
 
 <!-- Hero Section -->
-<section class="hero">
+<section class="hero text-center text-white py-5">
     <div class="container">
         <h1 class="display-4">The Little Mermaid</h1>
         <p>2023 | PG | 2h 14min | Romance</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla commodo felis in lacinia auctor.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         <div class="d-flex justify-content-center gap-3">
-
-            <a href="admin.jsp" class="btn btn-custom px-4 py-2">Watch Now</a>
+            <a href="admin.jsp" class="btn btn-danger px-4 py-2">Watch Now</a>
             <a href="mylist.jsp" class="btn btn-outline-light px-4 py-2">My List</a>
         </div>
     </div>
 </section>
 
-<!-- Movies Section -->
-<div class="container my-5">
-    <h2 class="section-title">Trending Movies</h2>
-    <div class="row g-4">
-        <!-- Card 1 -->
-        <div class="col-md-3">
-            <div class="movie-card">
-                <img src="photos/the%20littlemarmed.jpg" alt="Movie Poster">
-                <div class="movie-info">
-                    <h5>The Little Mermaid</h5>
-                    <p>2023 | PG | 2h 14min</p>
-                </div>
-            </div>
-        </div>
-        <!-- Card 2 -->
-        <div class="col-md-3">
-            <div class="movie-card">
-                <img src="photos/tank.jpg" alt="Movie Poster">
-                <div class="movie-info">
-                    <h5>Tank</h5>
-                    <p>2023 | PG-13 | 1h 55min</p>
-                </div>
-            </div>
-        </div>
-        <!-- Card 3 -->
-        <div class="col-md-3">
-            <div class="movie-card">
-                <img src="photos/45.jpg" alt="Movie Poster">
-                <div class="movie-info">
-                    <h5>45</h5>
-                    <p>2023 | R | 2h 20min</p>
-                </div>
-            </div>
-        </div>
-        <!-- Card 4 -->
-        <div class="col-md-3">
-            <div class="movie-card">
-                <img src="photos/noha.jpg" alt="Movie Poster">
-                <div class="movie-info">
-                    <h5>Noah Driver</h5>
-                    <p>2023 | PG | 1h 45min</p>
-                </div>
-            </div>
-        </div>
+<!-- Alert Messages -->
+<% if (alertMessage != null) { %>
+<div class="container">
+    <div class="alert alert-<%= alertType %>" role="alert">
+        <%= alertMessage %>
     </div>
 </div>
-<img id="background" src="photos/homepage%20background%20photo.webp">
+<% } %>
+
+<!-- Movies Section -->
+<div class="container my-5">
+    <h2 class="section-title text-center text-warning mb-4">Trending Movies</h2>
+    <div class="row g-4">
+        <% if (dataList != null && !dataList.isEmpty()) { %>
+        <% for (ProductDTO productDTO : dataList) { %>
+        <div class="col-md-3">
+            <div class="movie-card">
+                <img src="photos/<%= productDTO.getImagePath() %>" alt="Movie Poster" class="img-fluid">
+                <div class="movie-info text-center">
+                    <h5 class="text-warning"><%= productDTO.getName() %></h5>
+                    <p><%= productDTO.getDescription() %></p>
+                    <p>$<%= productDTO.getPrice() %></p>
+                </div>
+            </div>
+        </div>
+        <% } %>
+        <% } else { %>
+        <div class="col-12 text-center">
+            <p class="text-muted">No movies available at the moment.</p>
+        </div>
+        <% } %>
+    </div>
+</div>
 
 <!-- Footer -->
-<footer class="bg-dark text-white p-4 text-center mt-auto fixed-bottom">
+<footer class="bg-dark text-white text-center p-4">
     <p>&copy; 2025 iMovies. All Rights Reserved.</p>
-    <p>
-        <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a>
-    </p>
 </footer>
 
 <!-- Bootstrap JS -->

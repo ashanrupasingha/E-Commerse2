@@ -221,7 +221,7 @@
                 </div>
                 <div class="action-buttons">
                     <button class="btn btn-remove">Remove</button>
-                    <button class="btn btn-add">Add to Cart</button>
+                    <button class="btn btn-add" onclick="location.href='placeorder.jsp'">Add to Cart</button>
                 </div>
             </div>
         </div>

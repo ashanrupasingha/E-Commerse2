@@ -238,7 +238,7 @@
 <body>
 <div class="container" id="container">
     <div class="form-container sign-up">
-        <form>
+        <form action="AddUserServlet" method="post">
             <h1>Create Account</h1>
             <div class="social-icons">
                 <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
@@ -247,12 +247,12 @@
                 <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
             </div>
             <span>or use your email for registration</span>
-            <input name="name" type="text" placeholder="Name" />
-            <input name="email" type="email" placeholder="Email" />
-            <input name="password" type="password" placeholder="Password" />
-            <input name="conform password" type="password" placeholder="Conform Password" />
+            <input name="Name" type="text" placeholder="Name" />
+            <input name="Email" type="email" placeholder="Email" />
+            <input name="Password" type="password" placeholder="Password" />
+            <input name="ConformPassword" type="password" placeholder="ConformPassword" />
 
-            <button>Sign Up</button>
+            <input type="submit" value="Sign up" class="btn" >
         </form>
     </div>
     <div class="form-container sign-in">
